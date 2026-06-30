@@ -1,4 +1,4 @@
-
+//IMPLEMENTED A DNA PAIR GENERATOR
 function validateDna(check){
     const dnaBase = "ATCG"
     for(let i=0;i<check.length;i++){
