@@ -1,0 +1,52 @@
+/* Base page layout - safe block layout that centers everything naturally */
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: #cd6b9d;
+  color: #2d3748;
+  max-width: 360px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Clear, centered heading layout */
+h1 {
+  font-size: 1.75rem;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+/* Strips default list bullets and padding */
+.item-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Formats each list item into a clean row */
+.item-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 14px 18px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  font-weight: 500;
+}
+
+/* Strips default browser button borders and background colors */
+.favorite-icon {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0;
+  color: #a0aec0;
+  line-height: 1;
+}
+
+/* FCC REQUIRED: Targets the filled class when active */
+.filled {
+  color: #d13636;
+}
