@@ -1,0 +1,119 @@
+/* ==========================================
+   1. The Canvas: Deep Tech Dark-Slate
+   ========================================== */
+* {
+  box-sizing: border-box; /* Crucial: ensures padding doesn't break element widths */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  /* Deep, premium dark gradient for that developer-hub workspace look */
+  background: linear-gradient(135deg, #0f172a 0%, #020617 100%);
+  min-height: 100vh;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ==========================================
+   2. The Card: Crisp Dashboard Surface
+   ========================================== */
+#box-container {
+  background-color: #ffffff;
+  padding: 32px;
+  border-radius: 16px;
+  /* Soft, multi-layered structural drop shadow */
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 460px; 
+  
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Perfectly uniform space between all components */
+}
+
+/* ==========================================
+   3. Typography Profiles
+   ========================================== */
+h1 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  color: #1e293b; /* Sleek charcoal dark tone */
+  margin: 0;
+  text-transform: uppercase;
+}
+
+#char-count {
+  /* Monospace typography prevents the text from shifting when layout values change */
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin: 0;
+  align-self: flex-end; /* Clean bottom-right positioning */
+  letter-spacing: -0.2px;
+}
+
+/* ==========================================
+   4. The Textarea: Premium Canvas Layout
+   ========================================== */
+#text-input {
+  width: 100%; /* Spans full container footprint cleanly due to box-sizing */
+  height: 110px; /* Substantially tall typing field */
+  padding: 16px;
+  font-size: 16px; 
+  line-height: 1.5;
+  color: #0f172a;
+  background-color: #f8fafc; /* Subtle off-white to indicate active input utility */
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  outline: none;
+  resize: none; 
+  
+  /* Snappy, responsive transitions for micro-interactions */
+  transition: border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Focus state: Shift from gray to a sharp, professional Blurple */
+#text-input:focus {
+  border-color: #6366f1; 
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.12); /* Modern focus rings aura */
+}
+
+/* Targeted small placeholder config */
+#text-input::placeholder {
+  font-size: 13px; /* Stays clean and micro-scaled */
+  color: #94a3b8;
+  font-weight: 400;
+}
+
+/* ==========================================
+   5. Interactive Controls: Delete Action Call
+   ========================================== */
+#delete-btn {
+  background-color: #0f172a; /* Sleek dark core body color */
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: flex-start; /* Stays tight to the left boundary */
+  
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+/* Micro-feedback behaviors for premium UX */
+#delete-btn:hover {
+  background-color: #ef4444; /* Flashes modern system red only on critical intent hover */
+}
+
+#delete-btn:active {
+  transform: scale(0.96); /* Instant physical click response */
+}
