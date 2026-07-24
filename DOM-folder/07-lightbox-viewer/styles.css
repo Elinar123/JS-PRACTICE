@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  padding: 40px 20px;
+  background-color: #0f172a; /* Sleek, dark slate background */
+  color: #f8fafc;            /* Crisp off-white text */
+  font-family: system-ui, -apple-system, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  margin-bottom: 2rem;
+  color: #38bdf8;            /* Bright sky-blue accent */
+}
+
+/* ==========================================================================
+   2. HORIZONTAL GALLERY ROW (Flexbox Engine)
+   ========================================================================== */
+.gallery {
+  display: flex;             /* Activates horizontal layout engine */
+  justify-content: center;   /* Centers the entire row horizontally */
+  align-items: center;       /* Aligns items vertically along the center line */
+  gap: 24px;                 /* Pure layout separation without using margins */
+  flex-wrap: wrap;           /* Prerequisite for responsiveness: wraps to next line if screen narrows */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  width: 250px;
+  height: 180px;
+  object-fit: cover;         /* Crops image data cleanly into fixed boxes without squishing pixels */
+  border-radius: 12px;       /* Modern rounded corners */
+  cursor: pointer;
+  border: 2px solid #334155; /* Subtle boundary border matching the dark theme */
+  
+  /* State Transition Pipeline */
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.2s;
+}
+
+/* Interactive Feedback State */
+.gallery-item:hover {
+  transform: translateY(-6px) scale(1.03); /* Lifts the item slightly on the Y-axis */
+  border-color: #38bdf8;                   /* Highlights the active gate color */
+  box-shadow: 0 10px 25px -5px rgba(56, 189, 248, 0.3); /* Soft glowing depth anchor */
+}
+
+/* ==========================================================================
+   3. LIGHTBOX VIEWPORT OVERLAY
+   ========================================================================== */
+.lightbox {
+  display: none;             /* Driven dynamically by your JS pipeline */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;             /* Forces view execution order to stack on top */
+  
+  /* Modern Glassmorphic Backdrop Configuration */
+  background-color: rgba(15, 23, 42, 0.8); 
+  backdrop-filter: blur(12px); /* Native OS-style background blurring */
+  
+  /* Layout Alignment */
+  justify-content: center;
+  align-items: center;
+}
+
+#lightbox-image {
+  max-width: 85%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+}
+
+/* ==========================================================================
+   4. INTERACTIVE EXIT SWITCH
+   ========================================================================== */
+#close-btn {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-size: 2rem;
+  line-height: 1;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;        /* Perfect circle architecture */
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.2s, transform 0.2s;
+}
+
+#close-btn:hover {
+  background: rgba(239, 68, 68, 0.2);  /* Subtle red danger alert background */
+  border-color: #ef4444;               /* Hard red accent */
+  transform: rotate(90deg);            /* System feedback rotation animation */
+}
